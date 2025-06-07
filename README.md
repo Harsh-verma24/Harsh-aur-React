@@ -8,5 +8,8 @@ PassGenerator
 visit app at https://harsh-aur-react.vercel.app/
 
 video Demonstration of app
-https://github.com/user-attachments/assets/218cd534-b006-45ca-b3f2-8fe391f2c577
+
+
+
+https://github.com/user-attachments/assets/98d4017b-89b3-43ec-baba-f55200330ff0
 
