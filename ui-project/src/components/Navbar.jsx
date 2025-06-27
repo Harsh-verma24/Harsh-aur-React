@@ -9,7 +9,7 @@ function Navbar() {
       className='cursor-pointer bg-black my-3 mx-2 h-full w-50 flex justify-center text-white'> 
       <img
       className='h-20 w-30'
-       src="/images/001_002-nike-logos-swoosh-white.jpg" alt="logo" />
+       src="/images/002_nike-logos-swoosh-white.png" alt="logo" />
        <h1 className='text-3xl bold italic my-5'>About</h1></div>
        <ul
        className='text-white text-xl my-8 gap-8 bold italic flex '>
