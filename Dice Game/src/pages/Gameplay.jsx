@@ -1,12 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
-import { Button,Dicebox, DiceImg } from '../components'
+import { Button,Dicebox, DiceImg,Rules } from '../components'
 import MsgBox from '../components/MsgBox'
 const Gameplay = () => {
   const [totalScore,setTotalScore] = useState(0)
   const [Img,setImg] =useState("/images/two.png")
   const [isSelected,setIsSelected] = useState(null)
   const [imgValue, setImgValue] = useState(0);
+  const [showRules, setShowRules] = useState(false);
 
 
 
@@ -68,7 +69,14 @@ const Gameplay = () => {
       content='Roll The Dice'  />
       <Button
       onclick={() => setTotalScore(0)} content='Restart'  />
+      <Button 
+      onclick={() => setShowRules(!showRules)}
+      content='Show Rules'/>
     </div>
+    
+    </div>
+    <div>
+      {showRules?<Rules />:''}
     </div>
     </div>
   )
