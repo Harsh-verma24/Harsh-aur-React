@@ -1,0 +1,22 @@
+@import 'tailwindcss';
+
+.btn{
+    background-color:black ;
+    color:white;
+    min-width:220px ;
+    min-height: 50px;
+    font-size: large;
+    border-radius: 4px;
+    gap:2px;
+    margin: 10px;
+    font-weight:700px ;
+    border:2px solid black; 
+    cursor: pointer;
+}
+
+.btn:hover{
+    background:white;
+    color:black;
+    border:2px solid black;
+    transition: 200 300 ease-in-out;
+}
