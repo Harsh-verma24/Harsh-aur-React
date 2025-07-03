@@ -21,8 +21,10 @@ const Gameplay = () => {
   let DiceNum = [1,2,3,4,5,6]
 
   function imgUpdate() {
-    setImg(imgPath[Math.floor(Math.random() * imgPath.length)].path)
-    setImgValue(imgPath[Math.floor(Math.random() * imgPath.length)].value)
+    const randomIndex = Math.floor(Math.random() * imgPath.length);
+    const { path, value } = imgPath[randomIndex];
+    setImg(path)
+    setImgValue(value)
   }
   
   return (
@@ -54,19 +56,20 @@ const Gameplay = () => {
     <div
     className='m-[30px]'>
       <Button 
-      onclick={() => {
-        if(isSelected !== null){
-          imgUpdate()
-        if(imgValue === isSelected) {
-          setTotalScore(totalScore + imgValue);
-          preventDefault();
-        }}
-        else{
-          alert("Please select a number");
-        }
-        setIsSelected(null);
-      }}
-      content='Roll The Dice'  />
+  onclick={() => {
+    if(isSelected !== null){
+      const randomIndex = Math.floor(Math.random() * imgPath.length);
+      const { path, value } = imgPath[randomIndex];
+      setImg(path);
+      if(value === isSelected) {
+        setTotalScore((prev) => prev + value); 
+      }
+      setIsSelected(null);
+    } else {
+      alert("Please select a number");
+    }
+  }}
+  content='Roll The Dice'  />
       <Button
       onclick={() => setTotalScore(0)} content='Restart'  />
       <Button 
